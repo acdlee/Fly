@@ -1,0 +1,14 @@
+we'll make a airplane travel
+
+we'll use hill climb to find the quickest route from s to g
+
+pygame will be the GUI
+we'll have motion for the plane
+
+!!!!
+we can use hillclimb to make the route for us
+instead of actually going in and selecting which airports to go to
+when u want to go from s to g, instead, just let the alg
+decide for you
+
+---mabye validate the above with a MST alg
