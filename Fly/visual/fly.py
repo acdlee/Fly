@@ -1,9 +1,16 @@
 import pygame
 import settings
 import event_checker
+import plane
 
-screen = settings.get_screen()
+#init pygame
+pygame.init()
 
+#create our screen/game window; inclues drawing cities
+screen = settings.set_screen()
+
+#create our plane
+plane = plane.Plane(screen)
 
 
 while True: 
@@ -12,6 +19,9 @@ while True:
 
 	#Draw a circle
 	#pygame.draw.circle(screen, (255, 255, 255), (800, 0), 30)
+
+	#Draw the plane
+	plane.update()
 
 	#Draw to screen
 	pygame.display.flip()

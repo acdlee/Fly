@@ -9,7 +9,7 @@ class TestAirportMethods(unittest.TestCase):
 	#Create an airport system (from class Airports) to be used
 	#in the later methods. 
 	def setUp(self):
-		self.LAX = Airport('LAX', (200, 20), ['Eugene'])
+		self.LAX = Airport('LAX', (200, 20), ['Eugene'])	#Cali
 		self.Eugene = Airport('Eugene', (100, 30), ['LAX'])	#oregon
 		self.SEA = Airport('Seattle-Tacoma', (20, 50), ['Eugene'])	#washington
 		self.system = Airports()
