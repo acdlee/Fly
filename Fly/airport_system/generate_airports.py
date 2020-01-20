@@ -4,12 +4,13 @@ from airports import Airport, Airports
 #drawn to our pygame window. 
 def generate():
 	#individual airports
-	LAX = Airport('LAX', (600, 40), ['Eugene'])	#Cali
-	Eugene = Airport('Eugene', (300, 80), ['LAX'])	#oregon
-	SEA = Airport('Seattle-Tacoma', (100, 100), ['Eugene'])	#washington
+	LAX = Airport('LAX', (120, 190), ['Eugene', 'Las Vegas'])	#Cali
+	Eugene = Airport('Eugene', (140, 80), ['LAX', "Las Vegas"])	#oregon
+	SEA = Airport('Seattle-Tacoma', (140, 30), ['Eugene'])	#washington
+	Nev = Airport('Las Vegas', (160, 160), ['LAX', 'Eugene']) #nevada
 
 	#list of airports
-	lst = [LAX, Eugene, SEA]
+	lst = [LAX, Eugene, SEA, Nev]
 
 	#Create the system of airports; then add the lst of Airports
 	system = Airports()

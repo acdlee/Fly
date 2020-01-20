@@ -17,9 +17,6 @@ while True:
 	#check events
 	event_checker.check_event()
 
-	#Draw a circle
-	#pygame.draw.circle(screen, (255, 255, 255), (800, 0), 30)
-
 	#Draw the plane
 	plane.update()
 

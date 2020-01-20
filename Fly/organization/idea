@@ -1,9 +1,4 @@
-we'll make a airplane travel
-
 we'll use hill climb to find the quickest route from s to g
-
-pygame will be the GUI
-we'll have motion for the plane
 
 !!!!
 we can use hillclimb to make the route for us
@@ -12,3 +7,16 @@ when u want to go from s to g, instead, just let the alg
 decide for you
 
 ---mabye validate the above with a MST alg
+
+
+
+have a typable input box that looks like
+WELCOME TO FLY
+To: .....  From: ....
+where the user inputs the start and end point of his travel
+-->from there, we'll have the airport start at the to and obvi
+	end at the from.
+-> these boxes will be positioned at the bottom of the screen
+   where we have extra room
+->maybe add some info likes number of miles it will take
+	and other stuff like that 

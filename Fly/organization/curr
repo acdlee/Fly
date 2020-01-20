@@ -1,10 +1,13 @@
 yesterday:
-we managed to draw the airports (their names) to the screen
-
-we also drew the airplane to the screen
+added connecting lines between airports
+added a new background image
+decided on some priority layering between connect lines/background/
+	airport names
+added some new airports to the mix
 
 todo:
-we need to work on the locations of the airports
+we need to work on text box input for the screen
+https://stackoverflow.com/questions/46390231/how-to-create-a-text-input-box-with-pygame
 
 we need to work on the airplane traveling to/from airports
 
