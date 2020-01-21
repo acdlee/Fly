@@ -7,7 +7,7 @@ class Plane(pygame.sprite.Sprite):
 		self.screen = screen
 		self.image = pygame.image.load('images/planejane.bmp')
 		self.rect = self.image.get_rect()
-		self.rect.x = screen.get_width() // 2
+		self.rect.x = 80
 		self.rect.y = screen.get_height() - 100
 
 	def update(self):

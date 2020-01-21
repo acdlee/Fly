@@ -1,13 +1,12 @@
 yesterday:
-added connecting lines between airports
-added a new background image
-decided on some priority layering between connect lines/background/
-	airport names
-added some new airports to the mix
+added text boxes to the game window
+they accept input and have default text
+also highlight on collision
 
 todo:
-we need to work on text box input for the screen
-https://stackoverflow.com/questions/46390231/how-to-create-a-text-input-box-with-pygame
+need to work on default text disapearing when clicked on..
+--> just start from fly.py and trace what happens to the
+    	boxes to narrow down what you need to change
 
 we need to work on the airplane traveling to/from airports
 
