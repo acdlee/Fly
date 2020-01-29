@@ -91,3 +91,22 @@ def setup(screen):
 	#screen.
 	draw_airports(screen, system)
 
+	#return the airport system at the end
+	return system
+
+
+
+#draw to the screen while we fly; don't re-generate the airports
+def flying_screen(screen, system):
+	#draw the lines that connect the airports
+	draw_connects(screen, system)
+
+	#set background image and screen color - RGB
+	background_color = (0, 255, 0)
+	screen.fill(background_color)
+	background = pygame.image.load('images/map.png')
+	screen.blit(background, (0,0))
+
+	#then draw the airports (their names) to the 
+	#screen.
+	draw_airports(screen, system)

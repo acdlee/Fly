@@ -1,6 +1,7 @@
 import pygame, sys
 sys.path.append('../airport_system/')
 import generate_airports
+sys.path.append('./visual_aid/')
 import illustrate
 
 
@@ -19,7 +20,9 @@ def set_screen():
 	background_color = (0, 255, 0)
 	screen.fill(background_color)
 
-	#call a helper function to help draw the cities
-	illustrate.setup(screen)
+	#call a helper function to help draw the cities.
+	#save the airport system as a variable
+	system = illustrate.setup(screen)
 
-	return screen
+	#return both the screen and the airport system
+	return screen, system

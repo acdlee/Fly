@@ -1,13 +1,9 @@
-yesterday:
-added text boxes to the game window
-they accept input and have default text
-also highlight on collision
-
 todo:
-need to work on default text disapearing when clicked on..
---> just start from fly.py and trace what happens to the
-    	boxes to narrow down what you need to change
 
-we need to work on the airplane traveling to/from airports
+-need to fix the bug where we can travel from tacoma to vegas
+but not tacoma to lax
+-->  just do a ton of print statements for debug
 
-after that we finish up with the actual hill climb
+-need to check if the airports are connected before traveling to each other
+
+-need to implement djkstras to find the shortest connected path for the airports

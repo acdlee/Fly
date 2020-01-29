@@ -6,7 +6,7 @@ def generate():
 	#individual airports
 	LAX = Airport('LAX', (120, 190), ['Eugene', 'Las Vegas'])	#Cali
 	Eugene = Airport('Eugene', (140, 80), ['LAX', "Las Vegas"])	#oregon
-	SEA = Airport('Seattle-Tacoma', (140, 30), ['Eugene'])	#washington
+	SEA = Airport('Tacoma', (140, 30), ['Eugene'])	#washington
 	Nev = Airport('Las Vegas', (160, 160), ['LAX', 'Eugene']) #nevada
 
 	#list of airports

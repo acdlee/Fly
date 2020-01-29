@@ -40,8 +40,9 @@ class Airports(object):
 	#the corresponding Airport object; 
 	#returns None if not found. 
 	def search_airports(self, name):
+		name = name.lower()
 		for i in range(len(self.airports)):
-			if self.airports[i].name == name:
+			if self.airports[i].name.lower() == name:
 				return i
 		return None
 
@@ -77,19 +78,6 @@ class Airports(object):
 			self.distances[(airport_a, airport_b)] = distance
 			
 			return distance
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

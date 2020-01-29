@@ -7,7 +7,7 @@ font = pygame.font.Font('freesansbold.ttf', 30)
 #set some colors that we'll use for input boxes
 ACTIVE = pygame.Color(253,255,50)
 INACTIVE = pygame.Color(0,0,0)
-DEFAULT = pygame.Color(105,105,105)
+DEFAULT_COLOR = pygame.Color(105,105,105)
 
 class InputBox(object):	
 	"""Class representation of an input box."""
@@ -17,7 +17,7 @@ class InputBox(object):
 		self.color =INACTIVE
 		self.default = default
 		self.text = default
-		self.txt_surface = font.render(self.text, True, DEFAULT)
+		self.txt_surface = font.render(self.text, True, DEFAULT_COLOR)
 
 	#draw the text and the rect to the screen
 	def draw(self, screen):
@@ -35,13 +35,29 @@ class InputBox(object):
 
 	#This method udpates the text of the input box
 	def update_text(self):
-		self.txt_surface = font.render(self.text, True, DEFAULT)
+		self.txt_surface = font.render(self.text, True, DEFAULT_COLOR)
 
-	def handle_event(self, event, screen):
-		#if they finished typing
+	#This function processes keyboard input into our
+	#input boxes. 
+	def handle_event(self, event, screen, plane):
+		#if they just selected the box and are about to type,
+		#remove the default text.
+		if self.text == self.default:
+			self.text = ''
+			self.update_text()
+			self.reset_box(screen)
+
+		#if they finished typing, attempt to store the text
 		if event.key == pygame.K_RETURN:
-			#store the text
-			print(self.text)
+			#check if input text is an airport in our system
+			if plane.system.search_airports(self.text) != None:
+				#if it's the TO: input box, store in plane.going_to
+				if self.default == 'TO:':
+					plane.going_to = self.text	
+				#else store in plane.going_from
+				else:
+					plane.coming_from = self.text
+
 			#and reset the input box
 			self.text = self.default
 			self.reset_box(screen)
@@ -62,8 +78,7 @@ class InputBox(object):
 	#This function recolors the input box; ie, 
 	#gets rid of the old text.
 	def reset_box(self, screen):
-		rect = self.rect
-		pygame.draw.rect(screen, (0, 255, 0), rect, 0)		
+		pygame.draw.rect(screen, (0, 255, 0), self.rect, 0)		
 
 
 
